@@ -1,8 +1,10 @@
+
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, CreditCard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -19,10 +21,10 @@ const Index = () => {
 
           <div className="flex gap-4 mb-6">
             <Button asChild variant="default">
-              <a href="/sign-in">Sign In</a>
+              <Link to="/sign-in">Sign In</Link>
             </Button>
             <Button asChild variant="outline">
-              <a href="/sign-up">Sign Up</a>
+              <Link to="/sign-up">Sign Up</Link>
             </Button>
           </div>
 
@@ -31,21 +33,27 @@ const Index = () => {
               <MapPin className="h-8 w-8 text-primary mb-4" />
               <h3 className="text-xl font-heading font-semibold mb-2">Find Transport</h3>
               <p className="text-muted-foreground mb-4">Locate nearby transport options and plan your journey</p>
-              <Button className="w-full">Explore Options</Button>
+              <Button className="w-full" asChild>
+                <Link to="/find">Explore Options</Link>
+              </Button>
             </Card>
 
             <Card className="p-6 hover-card">
               <Clock className="h-8 w-8 text-primary mb-4" />
               <h3 className="text-xl font-heading font-semibold mb-2">Quick Booking</h3>
               <p className="text-muted-foreground mb-4">Book your next ride in seconds</p>
-              <Button className="w-full">Book Now</Button>
+              <Button className="w-full" asChild>
+                <Link to="/find">Book Now</Link>
+              </Button>
             </Card>
 
             <Card className="p-6 hover-card">
               <CreditCard className="h-8 w-8 text-primary mb-4" />
               <h3 className="text-xl font-heading font-semibold mb-2">Easy Payments</h3>
               <p className="text-muted-foreground mb-4">Manage your payments and view history</p>
-              <Button className="w-full">View Payments</Button>
+              <Button className="w-full" asChild>
+                <Link to="/payments">View Payments</Link>
+              </Button>
             </Card>
           </div>
 

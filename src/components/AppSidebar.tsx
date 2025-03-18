@@ -10,6 +10,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Home, MapPin, Calendar, CreditCard, Settings, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navigationItems = [
   { title: "Dashboard", icon: Home, url: "/" },
@@ -33,10 +34,10 @@ export function AppSidebar() {
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url} className="flex items-center gap-3 px-4 py-2">
+                    <Link to={item.url} className="flex items-center gap-3 px-4 py-2">
                       <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
