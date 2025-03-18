@@ -1,4 +1,3 @@
-
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Card } from "@/components/ui/card";
@@ -16,6 +15,15 @@ const Index = () => {
           <div className="space-y-2">
             <h1 className="text-4xl font-heading font-bold text-primary">Welcome to CityLift Connect</h1>
             <p className="text-lg text-muted-foreground">Your smart urban mobility solution</p>
+          </div>
+
+          <div className="flex gap-4 mb-6">
+            <Button asChild variant="default">
+              <a href="/sign-in">Sign In</a>
+            </Button>
+            <Button asChild variant="outline">
+              <a href="/sign-up">Sign Up</a>
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
