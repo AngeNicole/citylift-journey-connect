@@ -11,6 +11,7 @@ import SignUp from "./pages/auth/SignUp";
 import FindTransport from "./pages/FindTransport";
 import Bookings from "./pages/Bookings";
 import Payments from "./pages/Payments";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/find" element={<FindTransport />} />
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/payments" element={<Payments />} />
+          <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

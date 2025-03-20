@@ -60,7 +60,7 @@ const Payments = () => {
                 <CardTitle className="text-xl">{payment.service}</CardTitle>
                 <CardDescription>Invoice {payment.id}</CardDescription>
               </div>
-              <Badge variant={payment.status === "completed" ? "success" : "outline"}>
+              <Badge variant={payment.status === "completed" ? "secondary" : "outline"}>
                 {payment.status === "completed" ? "Paid" : "Pending"}
               </Badge>
             </CardHeader>
